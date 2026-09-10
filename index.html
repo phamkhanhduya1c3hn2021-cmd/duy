@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gia sư Toán & Khoa học Tự nhiên | Portfolio & LMS Mini</title>
+  
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#1A365D',
+              dark: '#0F233D',
+              light: '#F7FAFC',
+              mint: '#319795',
+              mintHover: '#287977',
+              accentWarm: '#DD6B20',
+            }
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-brand-light text-slate-800 font-sans antialiased selection:bg-teal-100 selection:text-teal-900">
+
+  <!-- ==================== PHẦN 1: HEADER & NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo / Tên -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-brand-navy text-white flex items-center justify-center font-heading font-extrabold text-lg shadow-lg shadow-blue-900/20 group-hover:scale-105 transition-transform">
+          EDU
+        </div>
+        <div>
+          <span class="font-heading font-bold text-lg text-brand-navy leading-tight block tracking-tight">GIA SƯ KHTN & TOÁN</span>
+          <span class="text-xs text-slate-500 font-medium block">Cổng Học Tập & Luyện Thi</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#about" class="hover:text-brand-navy transition-colors">Về tôi</a>
+        <a href="#schedule" class="hover:text-brand-navy transition-colors">Lịch học</a>
+        <a href="#materials" class="hover:text-brand-navy transition-colors">Tài liệu</a>
+        <a href="#register" class="hover:text-brand-navy transition-colors">Đăng ký</a>
+        <a href="#reviews" class="hover:text-brand-navy transition-colors">Đánh giá</a>
+        <a href="#contact" class="hover:text-brand-navy transition-colors">Liên hệ</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-3">
+        <a href="#register" class="bg-brand-mint hover:bg-brand-mintHover text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all shadow-md shadow-teal-700/20 active:scale-95 hidden sm:inline-block">
+          Đăng ký học ngay
+        </a>
+        <!-- Mobile menu toggle button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 hover:text-brand-navy focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 text-sm font-medium">
+      <a href="#about" class="block py-1 hover:text-brand-navy" onclick="toggleMenu()">Về tôi</a>
+      <a href="#schedule" class="block py-1 hover:text-brand-navy" onclick="toggleMenu()">Lịch học</a>
+      <a href="#materials" class="block py-1 hover:text-brand-navy" onclick="toggleMenu()">Tài liệu</a>
+      <a href="#register" class="block py-1 text-brand-mint font-semibold" onclick="toggleMenu()">Đăng ký học ngay</a>
+      <a href="#reviews" class="block py-1 hover:text-brand-navy" onclick="toggleMenu()">Đánh giá</a>
+      <a href="#contact" class="block py-1 hover:text-brand-navy" onclick="toggleMenu()">Liên hệ</a>
+    </div>
+  </header>
+
+  <!-- ==================== PHẦN 2: HERO SECTION ==================== -->
+  <section class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-blue-50/60 via-white to-brand-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Text content -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 text-brand-navy text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="sparkles" class="w-4 h-4 text-brand-mint"></i> Dạy học định hướng năng lực & bản chất
+        </div>
+        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-navy leading-tight tracking-tight">
+          Bứt phá tư duy <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-teal-600">Toán & Khoa học Tự nhiên</span>
+        </h1>
+        <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          Đồng hành từ mất gốc đến nâng cao, rèn luyện tư duy logic phản biện, phương pháp dạy học khám phá bám sát cấu trúc đề và ứng dụng thực tiễn.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+          <a href="#schedule" class="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-dark text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg shadow-blue-950/20 transition-all hover:-translate-y-0.5">
+            <i data-lucide="calendar" class="w-4 h-4"></i> Xem lịch trống
+          </a>
+          <a href="#materials" class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-brand-navy font-semibold px-6 py-3.5 rounded-xl border border-slate-300 shadow-sm transition-all hover:-translate-y-0.5">
+            <i data-lucide="folder-down" class="w-4 h-4 text-brand-mint"></i> Kho tài liệu
+          </a>
+        </div>
+
+        <!-- Quick Trust Indicators -->
+        <div class="pt-6 flex items-center justify-center lg:justify-start gap-6 text-xs text-slate-500">
+          <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-mint"></i> Kèm 1-1 & Nhóm nhỏ</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-mint"></i> Lộ trình cá nhân hóa</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-mint"></i> Hỗ trợ học tập 24/7</span>
+        </div>
+      </div>
+
+      <!-- Hero Image / Avatar card -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative w-72 sm:w-80 lg:w-full max-w-sm">
+          <!-- Background decoration -->
+          <div class="absolute -top-4 -left-4 w-72 h-72 bg-teal-200/40 rounded-full blur-2xl -z-10"></div>
+          <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-blue-300/30 rounded-full blur-2xl -z-10"></div>
+
+          <div class="bg-white rounded-3xl p-6 shadow-2xl border border-slate-200/80 text-center relative overflow-hidden">
+            <div class="w-36 h-36 mx-auto rounded-full bg-gradient-to-tr from-brand-navy to-teal-600 p-1.5 shadow-xl mb-4">
+              <!-- Placeholder avatar: Thay ảnh chân dung vào thuộc tính src -->
+              <div class="w-full h-full rounded-full bg-slate-100 flex items-center justify-center overflow-hidden border-2 border-white">
+                <i data-lucide="user" class="w-16 h-16 text-brand-navy"></i>
+              </div>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-brand-navy">Gia Sư Sư Phạm</h3>
+            <p class="text-sm font-medium text-brand-mint mt-1">Toán THCS/THPT & KHTN</p>
+            <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500 leading-relaxed italic">
+              "Hiểu bản chất để giải quyết mọi bài toán phức tạp bằng tư duy tinh gọn."
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PHẦN 3: GIỚI THIỆU CÁ NHÂN & THÀNH TÍCH ==================== -->
+  <section id="about" class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-mint">Hồ Sơ Năng Lực</span>
+        <h2 class="font-heading text-3xl font-extrabold text-brand-navy mt-1">Trình Độ Học Vấn & Kinh Nghiệm</h2>
+        <p class="text-slate-500 text-sm mt-3">Được đào tạo bài bản về khoa học cơ bản và phương pháp sư phạm hiện đại.</p>
+      </div>
+
+      <!-- Stats counter -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-brand-light border border-slate-200/80 text-center hover:shadow-md transition-shadow">
+          <div class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy">5+</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-600 mt-2">Năm Kinh Nghiệm Dạy Kèm</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-brand-light border border-slate-200/80 text-center hover:shadow-md transition-shadow">
+          <div class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-mint">150+</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-600 mt-2">Học Sinh Đã Dẫn Dắt</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-brand-light border border-slate-200/80 text-center hover:shadow-md transition-shadow">
+          <div class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy">94%</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-600 mt-2">Tăng 2–3 Điểm Sau 2 Tháng</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-brand-light border border-slate-200/80 text-center hover:shadow-md transition-shadow">
+          <div class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-accentWarm">100%</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-600 mt-2">Cam Kết Đồng Hành Đến Cùng</div>
+        </div>
+      </div>
+
+      <!-- 3 Khối phương pháp sư phạm -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Phương pháp 1 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-brand-mint transition-colors space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-brand-mint flex items-center justify-center">
+            <i data-lucide="compass" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-brand-navy">Dạy Học Khám Phá</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Học sinh tự phân tích tình huống, suy luận định lý và hiện tượng trước khi đúc kết công thức, giúp ghi nhớ lâu dài không gượng ép.
+          </p>
+        </div>
+
+        <!-- Phương pháp 2 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-brand-mint transition-colors space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center">
+            <i data-lucide="git-branch" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-brand-navy">Cá Nhân Hóa Lộ Trình</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Kiểm tra đầu vào xác định lỗ hổng kiến thức chính xác, xây dựng giáo án chuyên biệt theo năng lực tiếp thu của từng em.
+          </p>
+        </div>
+
+        <!-- Phương pháp 3 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-brand-mint transition-colors space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+            <i data-lucide="target" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-brand-navy">Theo Sát & Báo Cáo Định Kỳ</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Kiểm tra nhanh đầu giờ, theo dõi tiến độ từng tuần và gửi báo cáo kết quả rèn luyện minh bạch cho phụ huynh sau mỗi tháng.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PHẦN 4: THỜI KHÓA BIỂU & LỊCH DẠY ==================== -->
+  <section id="schedule" class="py-20 bg-brand-light border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-mint">Thời Gian Biểu</span>
+        <h2 class="font-heading text-3xl font-extrabold text-brand-navy mt-1">Lịch Dạy & Khung Giờ Còn Trống</h2>
+        <p class="text-slate-500 text-sm mt-2">Dễ dàng theo dõi để đăng ký xếp lịch học kèm 1-1 hoặc nhóm học phù hợp.</p>
+      </div>
+
+      <!-- Chú thích màu sắc -->
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-semibold">
+        <span class="inline-flex items-center gap-2">
+          <span class="w-3.5 h-3.5 rounded-full bg-emerald-500 inline-block"></span> Ca Trống (Có thể nhận)
+        </span>
+        <span class="inline-flex items-center gap-2">
+          <span class="w-3.5 h-3.5 rounded-full bg-slate-400 inline-block"></span> Đã Kín Lịch
+        </span>
+        <span class="inline-flex items-center gap-2">
+          <span class="w-3.5 h-3.5 rounded-full bg-amber-500 inline-block"></span> Lịch Kiểm Tra / Chuyên Đề
+        </span>
+      </div>
+
+      <!-- Bảng tuần -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead class="bg-brand-navy text-white font-heading text-xs uppercase tracking-wider">
+              <tr>
+                <th class="p-4 border-r border-blue-900 w-32">Thứ</th>
+                <th class="p-4 border-r border-blue-900 min-w-[180px]">Ca Sáng (08:00 - 10:00)</th>
+                <th class="p-4 border-r border-blue-900 min-w-[180px]">Ca Chiều (14:30 - 16:30)</th>
+                <th class="p-4 min-w-[180px]">Ca Tối (18:30 - 20:30)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-xs sm:text-sm">
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 font-bold text-brand-navy border-r border-slate-100">Thứ 2</td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-100 text-emerald-800">Trống (Nhận 1-1)</span></td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600">Lớp Toán 8 (Kín)</span></td>
+                <td class="p-4"><span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600">Lớp Toán 12 (Kín)</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 font-bold text-brand-navy border-r border-slate-100">Thứ 3</td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-400">Nghiên cứu giáo án</span></td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-100 text-emerald-800">Trống (KHTN 6-7)</span></td>
+                <td class="p-4"><span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-100 text-emerald-800">Trống (Toán 10)</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 font-bold text-brand-navy border-r border-slate-100">Thứ 4</td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-100 text-emerald-800">Trống (Nhận 1-1)</span></td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600">Lớp Toán 9 (Kín)</span></td>
+                <td class="p-4"><span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600">Toán 12 Luyện Đề (Kín)</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 font-bold text-brand-navy border-r border-slate-100">Thứ 5</td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-400">Soạn tài liệu</span></td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-100 text-emerald-800">Trống (KHTN 8-9)</span></td>
+                <td class="p-4"><span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-100 text-emerald-800">Trống (Toán 11)</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 font-bold text-brand-navy border-r border-slate-100">Thứ 6</td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-100 text-emerald-800">Trống (Nhận 1-1)</span></td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600">Lớp Toán 9 (Kín)</span></td>
+                <td class="p-4"><span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600">Hóa 10 Nâng Cao (Kín)</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 font-bold text-brand-navy border-r border-slate-100">Thứ 7</td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-100 text-emerald-800">Trống (Sáng T7)</span></td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-100 text-emerald-800">Trống (Chiều T7)</span></td>
+                <td class="p-4"><span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600">Lớp Nhóm KHTN (Kín)</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-4 font-bold text-brand-navy border-r border-slate-100">Chủ Nhật</td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-100 text-amber-800">Thi Thử Định Kỳ</span></td>
+                <td class="p-4 border-r border-slate-100"><span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-100 text-amber-800">Sửa Đề Trực Tuyến</span></td>
+                <td class="p-4"><span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-400">Nghỉ</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PHẦN 5: KHO TÀI LIỆU HỌC TẬP ==================== -->
+  <section id="materials" class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-mint">Tài Nguyên LMS Mini</span>
+        <h2 class="font-heading text-3xl font-extrabold text-brand-navy mt-1">Kho Tài Liệu Học Tập & Đề Thi</h2>
+        <p class="text-slate-500 text-sm mt-2">Tổng hợp đề thi thử có giải chi tiết, tóm tắt lý thuyết sơ đồ tư duy miễn phí.</p>
+      </div>
+
+      <!-- Grid Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Thẻ 1 -->
+        <div class="bg-brand-light rounded-2xl p-6 border border-slate-200 flex flex-col justify-between hover:shadow-lg transition-shadow">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center">
+              <i data-lucide="file-check-2" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Đề Thi Thử</span>
+              <h3 class="font-heading font-bold text-lg text-brand-navy mt-2">Bộ 15 Đề Tuyển Sinh Vào 10</h3>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Trọn bộ đề thi thử môn Toán có đáp án barem điểm chi tiết từng câu, kèm video hướng dẫn mẹo làm bài.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-200/60 mt-4">
+            <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-brand-navy hover:text-brand-mint transition-colors">
+              <i data-lucide="download" class="w-4 h-4"></i> Tải về ngay (.PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- Thẻ 2 -->
+        <div class="bg-brand-light rounded-2xl p-6 border border-slate-200 flex flex-col justify-between hover:shadow-lg transition-shadow">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center">
+              <i data-lucide="network" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2 py-0.5 rounded">Sơ Đồ Tư Duy</span>
+              <h3 class="font-heading font-bold text-lg text-brand-navy mt-2">Mindmap Hóa Học Vô Cơ & Hữu Cơ</h3>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Chuỗi chuyển hóa chất, quy tắc danh pháp và các dạng phản ứng quan trọng giúp học sinh nắm vững lý thuyết trong 1 trang.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-200/60 mt-4">
+            <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-brand-navy hover:text-brand-mint transition-colors">
+              <i data-lucide="external-link" class="w-4 h-4"></i> Xem trên Google Drive
+            </a>
+          </div>
+        </div>
+
+        <!-- Thẻ 3 -->
+        <div class="bg-brand-light rounded-2xl p-6 border border-slate-200 flex flex-col justify-between hover:shadow-lg transition-shadow">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
+              <i data-lucide="book-marked" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded">Chuyên Đề Nâng Cao</span>
+              <h3 class="font-heading font-bold text-lg text-brand-navy mt-2">Chinh Phục Điểm 9+ Toán & KHTN</h3>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Tuyển tập bài toán thực tế, bất đẳng thức và bài tập cơ chế phân loại học sinh thi trường chuyên hoặc thi đại học.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-200/60 mt-4">
+            <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-brand-navy hover:text-brand-mint transition-colors">
+              <i data-lucide="download" class="w-4 h-4"></i> Tải tài liệu chuyên đề
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PHẦN 6: ĐĂNG KÝ LỚP HỌC (FORM & QUY TRÌNH) ==================== -->
+  <section id="register" class="py-20 bg-brand-light border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Cột trái: Quy trình 3 bước -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-mint">Tham Gia Lớp Học</span>
+            <h2 class="font-heading text-3xl font-extrabold text-brand-navy mt-1">Quy Trình Đăng Ký 3 Bước</h2>
+            <p class="text-slate-500 text-sm mt-2">Để lại thông tin, phụ huynh và học sinh sẽ nhận được tư vấn chi tiết trong 24 giờ.</p>
+          </div>
+
+          <div class="space-y-6">
+            <!-- Bước 1 -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md">
+                1
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-base text-brand-navy">Điền thông tin đăng ký</h4>
+                <p class="text-xs text-slate-500 mt-1">Cung cấp khối lớp, môn học cần cải thiện và mục tiêu điểm số mong muốn.</p>
+              </div>
+            </div>
+
+            <!-- Bước 2 -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-mint text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md">
+                2
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-base text-brand-navy">Kiểm tra đầu vào & Tư vấn</h4>
+                <p class="text-xs text-slate-500 mt-1">Trao đổi trực tiếp để đánh giá nền tảng kiến thức và chọn ca học phù hợp nhất.</p>
+              </div>
+            </div>
+
+            <!-- Bước 3 -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-accentWarm text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md">
+                3
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-base text-brand-navy">Học thử & Bắt đầu lộ trình</h4>
+                <p class="text-xs text-slate-500 mt-1">Trải nghiệm 1 buổi học thử miễn phí để đánh giá mức độ tương thích phương pháp.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 text-xs text-slate-600 flex items-center gap-3">
+            <i data-lucide="shield-check" class="w-6 h-6 text-brand-mint shrink-0"></i>
+            <span>Mọi thông tin cá nhân và số điện thoại phụ huynh đều được bảo mật tuyệt đối.</span>
+          </div>
+        </div>
+
+        <!-- Cột phải: Form Đăng Ký (Lưu vào LocalStorage) -->
+        <div class="lg:col-span-7">
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-lg space-y-6">
+            <div class="border-b border-slate-100 pb-4">
+              <h3 class="font-heading font-bold text-xl text-brand-navy">Phiếu Đăng Ký Học Viên Mới</h3>
+              <p class="text-xs text-slate-500 mt-1">Vui lòng điền đầy đủ các thông tin dưới đây</p>
+            </div>
+
+            <form id="enrollmentForm" onsubmit="handleRegistration(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Họ và tên học sinh *</label>
+                  <input type="text" id="regName" required placeholder="Nguyễn Văn A" class="w-full text-sm border border-slate-200 rounded-xl px-4 py-2.5 focus:outline-none focus:border-brand-navy focus:ring-1 focus:ring-brand-navy" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">SĐT / Zalo Phụ huynh *</label>
+                  <input type="tel" id="regPhone" required placeholder="09xxxxxxxx" class="w-full text-sm border border-slate-200 rounded-xl px-4 py-2.5 focus:outline-none focus:border-brand-navy focus:ring-1 focus:ring-brand-navy" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Khối lớp hiện tại *</label>
+                  <select id="regGrade" class="w-full text-sm border border-slate-200 rounded-xl px-4 py-2.5 focus:outline-none focus:border-brand-navy">
+                    <option value="Lớp 6 - 7">Lớp 6 - 7</option>
+                    <option value="Lớp 8 - 9 (Thi vào 10)">Lớp 8 - 9 (Thi vào 10)</option>
+                    <option value="Lớp 10 - 11">Lớp 10 - 11</option>
+                    <option value="Lớp 12 (Ôn thi tốt nghiệp & ĐH)">Lớp 12 (Ôn thi tốt nghiệp & ĐH)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Môn học cần hỗ trợ *</label>
+                  <select id="regSubject" class="w-full text-sm border border-slate-200 rounded-xl px-4 py-2.5 focus:outline-none focus:border-brand-navy">
+                    <option value="Toán học">Toán học</option>
+                    <option value="Khoa học Tự nhiên (KHTN)">Khoa học Tự nhiên (KHTN)</option>
+                    <option value="Hóa học chuyên sâu">Hóa học chuyên sâu</option>
+                    <option value="Cả Toán & KHTN">Cả Toán & KHTN</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Khung giờ mong muốn & Ghi chú thêm</label>
+                <textarea id="regNotes" rows="3" placeholder="VD: Muốn học tối thứ 3-5; mong muốn lấy lại gốc phần hình học..." class="w-full text-sm border border-slate-200 rounded-xl px-4 py-2.5 focus:outline-none focus:border-brand-navy"></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-brand-mint hover:bg-brand-mintHover text-white font-semibold py-3 rounded-xl text-sm transition-all shadow-md shadow-teal-700/20 active:scale-98">
+                Gửi Phiếu Đăng Ký
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PHẦN 7: ĐÁNH GIÁ CỦA PHỤ HUYNH & HỌC SINH ==================== -->
+  <section id="reviews" class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-mint">Phản Hồi Thực Tế</span>
+        <h2 class="font-heading text-3xl font-extrabold text-brand-navy mt-1">Cảm Nhận Của Phụ Huynh & Học Sinh</h2>
+        <p class="text-slate-500 text-sm mt-2">Động lực lớn nhất là sự tiến bộ rõ rệt và niềm say mê học hỏi của từng học trò.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Review 1 -->
+        <div class="bg-brand-light p-6 rounded-2xl border border-slate-200/80 space-y-4">
+          <div class="flex text-amber-400 gap-1">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+            "Bé nhà mình trước đây rất sợ môn Hóa và Toán hình. Học với thầy được 3 tháng bé đã tự giác làm bài tập, thi học kỳ vừa rồi đạt 8.5 điểm."
+          </p>
+          <div class="pt-4 border-t border-slate-200/60 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-blue-200 text-brand-navy font-bold flex items-center justify-center text-xs">
+              CH
+            </div>
+            <div>
+              <div class="font-semibold text-xs text-brand-navy">Chị Hương</div>
+              <div class="text-[11px] text-slate-400">Phụ huynh em Minh Đức (Lớp 9)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-brand-light p-6 rounded-2xl border border-slate-200/80 space-y-4">
+          <div class="flex text-amber-400 gap-1">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+            "Thầy dạy cực kỳ dễ hiểu, không ép học thuộc lòng công thức mà chỉ bản chất từ thí nghiệm thực tế. Tài liệu mindmap của thầy siêu xịn luôn ạ!"
+          </p>
+          <div class="pt-4 border-t border-slate-200/60 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-teal-200 text-teal-900 font-bold flex items-center justify-center text-xs">
+              HA
+            </div>
+            <div>
+              <div class="font-semibold text-xs text-brand-navy">Hoàng Anh</div>
+              <div class="text-[11px] text-slate-400">Học sinh lớp 12 (Thủ khoa khối A00)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-brand-light p-6 rounded-2xl border border-slate-200/80 space-y-4">
+          <div class="flex text-amber-400 gap-1">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
+            "Thầy rất đúng giờ và theo sát cháu từng bài kiểm tra nhỏ. Cảm ơn thầy đã đồng hành giúp con vượt qua kỳ thi vào lớp 10 công lập vừa rồi."
+          </p>
+          <div class="pt-4 border-t border-slate-200/60 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-amber-200 text-amber-900 font-bold flex items-center justify-center text-xs">
+              TT
+            </div>
+            <div>
+              <div class="font-semibold text-xs text-brand-navy">Anh Tuấn</div>
+              <div class="text-[11px] text-slate-400">Phụ huynh em Quỳnh Trang (Lớp 10)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PHẦN 8: LIÊN HỆ & CHÂN TRANG (FOOTER) ==================== -->
+  <footer id="contact" class="bg-brand-dark text-slate-300 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <!-- Thông tin liên hệ nhanh -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center font-heading font-extrabold text-sm">
+              EDU
+            </div>
+            <span class="font-heading font-bold text-lg text-white">GIA SƯ TOÁN & KHOA HỌC TỰ NHIÊN</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Tận tâm - Phương pháp - Trách nhiệm. Cung cấp giải pháp học tập toàn diện cho học sinh từ THCS đến THPT.
+          </p>
+          <div class="space-y-2.5 text-xs">
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-mint"></i>
+              <span>Hotline / Zalo: <strong class="text-white">09xx.xxx.xxx</strong></span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-mint"></i>
+              <span>Email: <strong class="text-white">giasu.khoahoctunhien@gmail.com</strong></span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-mint"></i>
+              <span>Khu vực: Dạy trực tiếp tại TP.HCM & Dạy Online toàn quốc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nền tảng giảng dạy -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider">Hình Thức Giảng Dạy</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li class="flex items-center gap-2"><i data-lucide="video" class="w-3.5 h-3.5 text-brand-mint"></i> Online qua Google Meet / Zoom có bảng viết điện tử</li>
+            <li class="flex items-center gap-2"><i data-lucide="home" class="w-3.5 h-3.5 text-brand-mint"></i> Kèm 1-1 tại nhà học viên khu vực TP.HCM</li>
+            <li class="flex items-center gap-2"><i data-lucide="users" class="w-3.5 h-3.5 text-brand-mint"></i> Lớp học nhóm nhỏ (3 - 5 học sinh) tối ưu chi phí</li>
+          </ul>
+        </div>
+
+        <!-- Kết nối QR Code -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider">Kết Nối Zalo Nhanh</h4>
+          <div class="w-32 h-32 bg-white rounded-2xl p-2 flex items-center justify-center">
+            <!-- Mã QR minh họa -->
+            <div class="w-full h-full border-2 border-dashed border-slate-300 rounded-xl flex flex-col items-center justify-center text-center p-2">
+              <i data-lucide="qr-code" class="w-10 h-10 text-brand-navy"></i>
+              <span class="text-[9px] text-slate-500 mt-1 font-semibold">Quét mã Zalo</span>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400">Quét mã để nhắn tin tư vấn trực tiếp với gia sư.</p>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+        © 2026 Portfolio Gia Sư Giáo Dục. Được tối ưu để triển khai trực tiếp trên GitHub Pages.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT XỬ LÝ SỰ KIỆN ==================== -->
+  <script>
+    // 1. Kích hoạt toàn bộ Lucide Icons
+    lucide.createIcons();
+
+    // 2. Toggle Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMenu() {
+      mobileMenu.classList.toggle('hidden');
+    }
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', toggleMenu);
+    }
+
+    // 3. Xử lý lưu form đăng ký vào LocalStorage
+    function handleRegistration(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('regName').value.trim();
+      const phone = document.getElementById('regPhone').value.trim();
+      const grade = document.getElementById('regGrade').value;
+      const subject = document.getElementById('regSubject').value;
+      const notes = document.getElementById('regNotes').value.trim();
+
+      const newStudent = {
+        id: Date.now(),
+        date: new Date().toLocaleDateString('vi-VN'),
+        name,
+        phone,
+        grade,
+        subject,
+        notes: notes || "Không có"
+      };
+
+      // Lưu trữ trên máy người dùng
+      const existingList = JSON.parse(localStorage.getItem('STUDENT_ENROLLMENTS') || '[]');
+      existingList.unshift(newStudent);
+      localStorage.setItem('STUDENT_ENROLLMENTS', JSON.stringify(existingList));
+
+      alert('Đăng ký thành công! Thông tin của bạn đã được ghi nhận. Thầy sẽ liên hệ lại qua Zalo/SĐT trong 24 giờ.');
+      document.getElementById('enrollmentForm').reset();
+    }
+  </script>
+</body>
+</html>
